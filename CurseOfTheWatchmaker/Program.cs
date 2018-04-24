@@ -3,10 +3,6 @@
  23.04.2018 */
 using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CurseOfTheWatchmaker
 {
@@ -45,11 +41,10 @@ namespace CurseOfTheWatchmaker
             }
             if (i < 10 || i > 10000)
             {
-                Console.WriteLine("Wrong Ruby Count");
+                Console.WriteLine("Wrong Ruby Count (10-10000)");
                 Console.ReadKey();
                 return;
             }
-
 
             //auth
             var vkApi = Api.Get("https://cm-prod-vk.belkatechnologies.com/bejeweled-balancer/abtest_container_proxy_prod?api_url=https://api.vk.com/api.php&api_id=3088991&api_settings=3&viewer_id=" + uid + "&viewer_type=2&sid=&secret=&access_token=&user_id=" + uid + "&group_id=0&is_app_user=1&auth_key=" + auth + "&language=0&parent_language=0&is_secure=1&stats_hash=&ads_app_id=&referrer=unknown&lc_name=&hash=");
@@ -93,9 +88,9 @@ namespace CurseOfTheWatchmaker
                     return;
                 }
             }
-            catch
+            catch(Exception ex)
             {
-                Console.WriteLine("Error!");
+                Console.WriteLine(ex.Message);
                 Console.ReadKey();
                 return;
             }

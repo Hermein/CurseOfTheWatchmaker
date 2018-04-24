@@ -1,5 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿/*Copyright Hermein Developer
+ License CC BY-SA 4.0 
+ 23.04.2018 */
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
@@ -7,7 +8,6 @@ using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace CurseOfTheWatchmaker
 {
